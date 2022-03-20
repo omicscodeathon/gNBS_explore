@@ -1,2 +1,8 @@
 chown -Rv $USER:$USER $PWD
 cat accession99.txt | xargs fasterq-dump -e 24 --outdir fastqs
+
+## Move FASTQC reports out of fastqs directory
+mkdir -pv data99/fastqc_reports
+mv -fv data99/fastqs/*.{html,zip} data99/fastqc_reports/
+
+##
