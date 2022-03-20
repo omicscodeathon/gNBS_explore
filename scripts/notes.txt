@@ -8,3 +8,9 @@ mv -fv data99/fastqs/*.{html,zip} data99/fastqc_reports/
 ## For MultiQC
 cd data99/
 multiqc fastqc_reports/
+
+
+##trim_galore
+trim_galore -q 25 --fastqc --length 50 --cores 8 --paired SRR_1.fastq SRR_2.fastq -o <path_to_outdir>
+
+#for f in *_1.fastq; do echo $f; echo trim_galore -q 25 --fastqc --length 50 --cores 8 --paired $f ${f/_1/_2}.fastq -o ../
