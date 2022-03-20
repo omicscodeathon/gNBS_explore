@@ -5,4 +5,6 @@ cat accession99.txt | xargs fasterq-dump -e 24 --outdir fastqs
 mkdir -pv data99/fastqc_reports
 mv -fv data99/fastqs/*.{html,zip} data99/fastqc_reports/
 
-##
+## For MultiQC
+cd data99/
+multiqc fastqc_reports/
