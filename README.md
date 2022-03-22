@@ -37,7 +37,10 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 ## **References**
 
 Kato, G. J., Piel, F. B., Reid, C. D., Gaston, M. H., Ohene-Frempong, K., Krishnamurti, L., Smith, W. R., Panepinto, J. A., Weatherall, D. J., Costa, F. F., & Vichinsky, E. P. (2018). Sickle cell disease. Nature Reviews. Disease Primers, 4, 18010. https://doi.org/10.1038/nrdp.2018.10
+
 Therrell  Jr, B. L., Lloyd-Puryear, M. A., Ohene-Frempong, K., Ware, R. E., Padilla, C. D., Ambrose, E. E., Barkat, A., Ghazal, H., Kiyaga, C., Mvalo, T., Nnodu, O., Ouldim, K., Rahimy, M. C., Santos, B., Tshilolo, L., Yusuf, C., Zarbalian, G., Watson, M. S., & faculty and speakers at the First Pan African Workshop on Newborn Screening  Morocco, June 12-14, 2019, R. (2020). Empowering newborn screening programs in African countries through establishment of an international collaborative effort. Journal of Community Genetics, 11(3), 253–268. https://doi.org/10.1007/s12687-020-00463-7
+
 Therrell, B. L., Padilla, C. D., Loeber, J. G., Kneisser, I., Saadallah, A., Borrajo, G. J. C., & Adams, J. (2015). Current status of newborn screening worldwide: 2015. Seminars in Perinatology, 39(3), 171–187. https://doi.org/10.1053/j.semperi.2015.03.002
+
 Veldman, A., Kiewiet, M. B. G., Heiner-fokkema, M. R., Nelen, M. R., Sinke, R. J., Sikkema-raddatz, B., Voorhoeve, E., Westra, D., Doll, M. E. T., Schielen, P. C. J. I., & Spronsen, F. J. Van. (2022). Towards Next-Generation Sequencing ( NGS ) -Based Newborn Screening : A Technical Study to Prepare for the Challenges Ahead.
 
