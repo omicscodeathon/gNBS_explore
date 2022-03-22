@@ -27,7 +27,7 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 2.	Fredrick Kakembo – Technical team lead
 3.	Annassiri Fatima Zahara
 4.	Marieme Top
-5.	[Pauline King’ori] (https://twitter.com/paulah_kings)
+5.	[Pauline King’ori](https://twitter.com/paulah_kings)
 
 
 
