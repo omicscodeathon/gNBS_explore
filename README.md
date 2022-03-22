@@ -1,6 +1,6 @@
-#**Exploring genomic new-born screening using next generation sequencing data**
+# **Exploring genomic new-born screening using next generation sequencing data**
 
-##**Background**
+**Background**
 Newborn screening (NBS) aim at identifying neonates in need of immediate life-saving treatment to improve health outcomes, or reduce morbidity through immediate, pre-symptomatic treatment (Veldman et al., 2022). NBS started early in the 1960s with focus on phenylketonuria (PKU) to prevent severe intellectual disability (Guthrie & Susi, 1963). Advancements in technology and improved scientific knowledge over time have expanded NBS to include multiple disorders.
 
 NBS programs are predominantly used for inherited metabolic disorders (IMDs) with a monogenetic origin. It is noteworthy that NBS  countries  but some countries screen for genetic non-IMDs as well (Veldman et al., 2022). About 33.3% of the global newborn population benefit from NBS currently. However, most of them residing in countries with developing only receive screening for a single condition while those in developed countries may be screened for over 50 conditions (Therrell et al., 2015). 
