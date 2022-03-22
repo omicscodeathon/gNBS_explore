@@ -1,4 +1,4 @@
-# **Exploring genomic new-born screening using next generation sequencing data**
+# **Exploring Genomic Newborn Screening using Next Generation Sequencing (NGS) Data**
 
 
 ## **Background**
