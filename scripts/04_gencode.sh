@@ -7,7 +7,9 @@ prefix_url="https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_0000014
 echo "PREFIX URL: $prefix_url"
 
 download_filename=$1
-echo "INPUT URL: $download_filename"
+echo "INPUT FILENAME: $download_filename"
 
 wget ${prefix_url}/${download_filename}
 echo "WGET successfully processed $download_filename"
+
+# for u in $(cat ../data/human_gencode/assembly_files.txt); do ./04_gencode.sh $u; done
