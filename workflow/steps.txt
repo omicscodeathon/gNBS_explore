@@ -1,11 +1,11 @@
 Steps: [Convert the steps into workflow diagram (include tools for each step) and update README.md]
-. Pull down the reads
-.
-.
-.
-.
-.
-.
-.
-.
-.
+. Pull down the reads (Fasterq-dump)
+. Quality Control (FastQC, MultiQC)
+. Trimming (TrimGalore, Trimmomatic, Cutadapt)
+. Redo Quality Control using MultiQC
+. Map the genome to reference (BWA, human - GRCh38 Refseq assembly)
+. GATK (base quality score recalibration)
+. Marking Duplicates
+. Generate VCFs / Variant Calling (Approach 1: 99 vcfs, 99 annotations. Approach 2: a single VCF, filter out variants)
+. Annotation (SnpEff, ANOVA {include dbSNP, ClinVAR etc})
+. Identify Variants of Interest (Data Manipulation / Hard Filtering)
