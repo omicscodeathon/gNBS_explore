@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# This script maps reads to a reference genome
+
 cpus=24
 echo "CPUS: $cpus"
 
