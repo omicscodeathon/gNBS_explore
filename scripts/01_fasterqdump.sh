@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 # This script uses fasterq-dump to download SRA accessions listed in the input accession file
 

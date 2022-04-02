@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 cpus=24
 echo "CPUS: $cpus"

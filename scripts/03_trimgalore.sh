@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 ##This script expects the forward sequence as mandatory input
 
