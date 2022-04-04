@@ -20,7 +20,16 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 
 ## **Materials and methods**
 
+<!--
 ![Presentation1](https://user-images.githubusercontent.com/61578503/159446323-eff1bed7-a786-4935-8365-afdfe72bf17f.png)
+-->
+
+## **Workflow**
+
+
+![Workflow](figures/workflow_jpg_modification_plan.jpg)
+
+
 
 ## **Team Members**
 
