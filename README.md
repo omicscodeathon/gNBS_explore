@@ -34,7 +34,7 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 
 
 ## **Tools used in the Analysis**
-1.Fastq-dump,
+1.Fasterq-dump,
 2.FastQC,
 3.Trim Galore,
 4.MultiQC,
