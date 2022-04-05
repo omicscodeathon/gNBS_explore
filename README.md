@@ -35,7 +35,7 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 
 1.	[Rissy Wesonga](https://github.com/Rissy2021) – Project team lead
 2.	[Olaitan I. Awe](https://github.com/laitanawe) – Project co-lead
-3.	Annassiri Fatima Zahara (https://github.com/f-annassiri) - Writer/Technical team
+3.	.[Annassiri Fatima Zahara].(https://github.com/f-annassiri) - Writer/Technical team
 4.	Fredrick Kakembo
 5.	Marieme Top
 6.	[Pauline King’ori](https://twitter.com/paulah_kings)
