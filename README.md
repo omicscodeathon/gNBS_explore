@@ -31,16 +31,16 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 
 
 
-##  ** Tools used in the Analysis**
-Fastq-dump 
-FastQC
-Trim Galore
-multiQC
-wget
-Burrows-Wheeler Aligner
+## **Tools used in the Analysis**
+1. Fastq-dump 
+2.FastQC
+3.Trim Galore
+4.multiQC
+5.wget
+6.Burrows-Wheeler Aligner
 
 
-##**The Overall Expected Project  Outputs include**
+## **The Overall Expected Project  Outputs include**
 1. Validation of our curated gNBS gene-panel for a subset of existent congenital disorders
 2. Identification of novel variants associated with key metabolic disorders in neonates
 3. Linking of the variants to the associated physiological diseased states
