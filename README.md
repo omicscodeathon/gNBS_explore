@@ -34,13 +34,22 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 
 
 ## **Tools used in the Analysis**
-1. Fastq-dump 
-2.FastQC
-3.Trim Galore
-4.multiQC
-5.wget
+1.Fastq-dump,
+2.FastQC,
+3.Trim Galore,
+4.MultiQC,
+5.wget,
 6.Burrows-Wheeler Aligner
 
+## **Input and Output Flow of the steps**
+1. Fasterq-dump (input is list of accessions, output is paired-end .fq files)
+2. FastQC (input: Fastqs, output: MultiQC reports in html, .txt)
+3. MultiQC (input is FastQC reports in html,.txt, output is MultiQC reports consolidated in html,.txt)
+4. Trim Galore (input: Fastqs, output: Fastqs with adapters removed)
+5. MultiQC (input is FastQC reports in html,.txt, output is MultiQC reports consolidated in html,.txt)
+6. wget: (input is URL for Gencode's GRCh38.p14, output is fastqs, annotations etc.)
+7. Burrows-Wheeler Aligner (Indexing): (input is path to Gencode's GRCh38.p14, output is a database or an index of the human genome)
+8. Burrows-Wheeler Aligner (Mapping): (input: prefix/path to human genome index and path to paired-end Fastq files/reads, output: Sequence Alignment Maps/.sam files)
 
 ## **Future Prospects for Our project**
 1. Developing functionally validated reproducible pipelines for genomic NBS data analysis and interpretation
