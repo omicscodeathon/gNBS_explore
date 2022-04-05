@@ -31,11 +31,25 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 
 
 
+##  ** Tools used in the Analysis**
+Fastq-dump 
+FastQC
+Trim Galore
+multiQC
+wget
+Burrows-Wheeler Aligner
+
+
+##**The Overall Expected Project  Outputs include**
+1. Validation of our curated gNBS gene-panel for a subset of existent congenital disorders
+2. Identification of novel variants associated with key metabolic disorders in neonates
+3. Linking of the variants to the associated physiological diseased states
+
 ## **Team Members**
 
 1.	[Rissy Wesonga](https://github.com/Rissy2021) – Project team lead
 2.	[Olaitan I. Awe](https://github.com/laitanawe) – Project co-lead
-3.	.[Annassiri Fatima Zahara].(https://github.com/f-annassiri) - Writer/Technical team
+3.	[Annassiri Fatima Zahara](https://github.com/f-annassiri) - Writer/Technical team
 4.	Fredrick Kakembo
 5.	Marieme Top
 6.	[Pauline King’ori](https://twitter.com/paulah_kings)
