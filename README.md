@@ -11,8 +11,10 @@ The current NBS programs in Africa are predominantly along the coast and organiz
 
 ## **Objectives**
 
-1.	To identify novel variants of metabolic disorders in neonates in the African context
-2.	To link the identified variants to the associated physiological diseased states in the African context
+1. Validation of our curated gNBS gene-panel for a subset of existent congenital disorders
+2. Identification of novel variants associated with key metabolic disorders in neonates
+3. Linking of these variants to the associated physiological diseased states in neonates
+
 
 ## **Significance of the study**
 
@@ -40,10 +42,10 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 6.Burrows-Wheeler Aligner
 
 
-## **The Overall Expected Project  Outputs include**
-1. Validation of our curated gNBS gene-panel for a subset of existent congenital disorders
-2. Identification of novel variants associated with key metabolic disorders in neonates
-3. Linking of the variants to the associated physiological diseased states
+## **Future Prospects for Our project**
+1. Developing functionally validated reproducible pipelines for genomic NBS data analysis and interpretation
+ i.e. Using Bioinformatics frameworks such as Nextflow and Snakemake
+2. Develope a functional African-specific gNBS analysis pipeline for use in routine Clinical Practice
 
 ## **Team Members**
 
