@@ -16,7 +16,7 @@ for f in $pattern; do echo "Input: "$f; \
 sample=$(echo $f | sed 's/[^SRR]*//' | sed 's/.sam//' );
 echo "Accession ID: "$sample
 #java -jar picard.jar SortSam \
-echo picard SortSam \
+picard SortSam \
  INPUT=$f \
  OUTPUT="$out_dir"/$sample.bam \
  SORT_ORDER=coordinate
