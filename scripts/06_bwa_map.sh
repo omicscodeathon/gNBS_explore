@@ -20,10 +20,10 @@ mkdir -pv 02_logs
 
 for file in $(ls $forward_seq_pattern); do a=$(echo $file | sed 's/[^SRR]*//' | sed 's/_1_val_1.fq//');
    echo "Accession ID: "$a; \
-   echo "Output SAM file: "02_sams/$a.sam; \
-   echo "Output Log file: "02_logs/$a.log; \
-   bwa mem -M -t $cpus $path_to_index_and_prefix $file ${file/_1_val_1.fq/_2_val_2.fq} \
-   > 02_sams/$a.sam 2> 02_logs/$a.log
+   echo "Output SAM file: "sams_bwa/$a.sam; \
+   echo "Output Log file: "logs_bwa/$a.log; \
+   bwa mem -M -t $cpus -R "@RG:\tID:$a\tSM:$a" $path_to_index_and_prefix $file ${file/_1_val_1.fq/_2_val_2.fq} \
+   > sams_bwa/$a.sam 2> logs_bwa/$a.log
 done
 
 # Indexing command that we ran
