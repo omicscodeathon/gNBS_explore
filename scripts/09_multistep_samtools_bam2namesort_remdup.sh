@@ -63,4 +63,4 @@ for input_bam in $input_sequence_pattern; do accession=$(echo $input_bam | sed '
   echo "samtools multistep BAM to mark and remove duplicates from BAM files successfully completed for all BAM files!"
 
 ## From the command line
-## for f in bam_dir/*.bam; do echo "processing: "$f; ./samtools_bam2sortedbam.sh $f; done
+## ./09_multistep_samtools_bam2sortedbam_remdup.sh
