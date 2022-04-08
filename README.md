@@ -54,7 +54,7 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 ## **Future Prospects for Our project**
 1. Developing functionally validated reproducible pipelines for genomic NBS data analysis and interpretation
  i.e. Using Bioinformatics frameworks such as Nextflow and Snakemake
-2. Develope a functional African-specific gNBS analysis pipeline for use in routine Clinical Practice
+2. Develop a functional African-specific gNBS analysis pipeline for use in routine Clinical Practice
 
 ## **Team Members**
 
