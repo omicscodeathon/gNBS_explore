@@ -52,9 +52,9 @@ for input_sam in $input_sequence_pattern; do accession=$(echo $input_sam | sed '
       M=$outdir_markdup$accession.markdup_metrics.txt
   echo "Picardtools marked duplicates process for coordinate-sorted BAM $accession.coordsort.bam completed."; \
 
-  echo PicardCommandLine BuildBamIndex \
-      I=$outdir_markdup$accession.marked_duplicates.bam
-  echo "Picardtools indexing process for marked-duplicate-sorted BAM $accession.marked_duplicates.bam completed."; \
+  PicardCommandLine BuildBamIndex \
+      I=$outdir_markdup$accession.markdup.bam
+  echo "Picardtools indexing process for marked-duplicate-sorted BAM "$accession".markdup.bam completed."; \
 
   #samtools sort -@$cpu -O BAM -n -o $outdir_namesort$accession.namesort.bam $input_bam; \
   #echo "samtools BAM to name-sorted BAM process completed for $input_bam!"; \
