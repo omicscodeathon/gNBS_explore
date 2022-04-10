@@ -64,6 +64,15 @@ for input_bam in $input_sequence_pattern; do f=$(basename $input_bam); accession
   echo; \
   echo "processing accession Id "$count_acc": " $accession \
 
+#PicardCommandLine AddOrReplaceReadGroups \
+   I=$outdir_markdup$accession.markdup.bam \
+   O=$outdir_markdup$accession.rg.markdup.bam \
+   RGID=$accession \
+   RGLB=lib1 \
+   RGPL=ILLUMINA \
+   RGPU=unit1 \
+   RGSM=$accession
+
 ##BaseRecalibrator Step:
 gatk BaseRecalibrator \
    -I $outdir_markdup$accession.markdup.bam \
