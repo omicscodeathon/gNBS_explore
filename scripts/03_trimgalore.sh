@@ -24,6 +24,7 @@ echo "Trimmed Reports Directory: "$trimmed_reports_dir
 count_acc=0
 for input_file in $input_forward_pattern; do f=$(basename $input_file); accession=$(echo $f | sed 's/_1.fastq//');
   ((count_acc++))
+  echo; \
   echo "Trimming adapters from accession Id "$count_acc": " $accession \
 
   trim_galore --paired $input_file ${input_file/_1/_2} -q $qual --length $min_read_length --cores $cpus --fastqc -o $trimmed_reads_outdir
