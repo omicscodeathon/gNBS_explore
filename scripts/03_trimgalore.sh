@@ -22,7 +22,7 @@ echo "Trimmed Reports Directory: "$trimmed_reports_dir
 
 
 count_acc=0
-for input_file in $input_forward_pattern; do accession=$(echo basename $input_file | sed 's/_1.fastq//');
+for input_file in $input_forward_pattern; do f=$(basename $input_file); accession=$(echo $f | sed 's/_1.fastq//');
   ((count_acc++))
   echo "Trimming adapters from accession Id "$count_acc": " $accession \
 
