@@ -29,7 +29,7 @@ for file in $(ls $forward_seq_pattern); do filename=$(basename $file); a=$(echo 
    echo "Accession ID $count_acc:"$a; \
    echo "Output SAM file: "sams_bwa/$a.sam; \
    echo "Output Log file: "logs_bwa/$a.log; \
-   bwa mem -M -t $cpus -R "@RG\tID:$a\tSM:$a" $path_to_index_and_prefix $file ${file/_1_val_1.fq/_2_val_2.fq} \
+   bwa mem -M -t $cpus -R "@RG\tID:$a\tLB:lib1\tPL:ILLUMINA\tPU:unit1\tSM:$a" $path_to_index_and_prefix $file ${file/_1_val_1.fq/_2_val_2.fq} \
    > $outdir_sams/$a.sam 2> $outdir_logs/$a.log
 done
 
