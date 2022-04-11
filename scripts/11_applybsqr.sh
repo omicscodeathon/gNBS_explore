@@ -19,11 +19,10 @@ recal_data_name="recal_data.table"
 
 outdir_markdup="../../stubdata/markdup_sortedbams_bwa/"
 outdir_applybsqr="../../stubdata/applybsqr_markdup/"
-output_sequence_pattern=$outdir_applybsqr"*.applybsqr.bam"
 input_sequence_pattern=$outdir_markdup"*.markdup.bam"
 
 echo "Input sequence pattern: "$input_sequence_pattern
-echo mkdir -pv $outdir_applybsqr
+mkdir -pv $outdir_applybsqr
 echo "Directory name for ApplyRecalibration BAM files will be: "$outdir_applybsqr
 
 echo
@@ -36,7 +35,7 @@ for input_bam in $input_sequence_pattern; do f=$(basename $input_bam); accession
   echo "Applying Base Quality Score Recalibration on accession Id "$count_acc": " $accession \
 
 ##BaseQualityScore ApplyRecalibrator Step:
-echo gatk ApplyBQSR \
+gatk ApplyBQSR \
    -R $human_reference_fasta \
    -I $outdir_markdup$accession.markdup.bam \
    --bqsr-recal-file $outdir_recal_data$recal_data_name \
