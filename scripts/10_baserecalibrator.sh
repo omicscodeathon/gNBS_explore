@@ -26,19 +26,21 @@ human_reference_fasta="../../databases/human_gencode/ref_broad/resources_broad_h
 
 
 #SNPs from Broad Institute
-#knownsite_snps1="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_Homo_sapiens_assembly38.dbsnp138.vcf"
 knownsite_snps1="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_Homo_sapiens_assembly38.known_indels.vcf.gz"
 knownsite_snps2="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_Mills_and_1000G_gold_standard.indels.hg38.vcf.gz"
-#knownsite_snps3="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_1000G.phase3.integrated.sites_only.no_MATCHED_REV.hg38.vcf"
-#knownsite_snps4="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_Axiom_Exome_Plus.genotypes.all_populations.poly.hg38.vcf.gz"
-#knownsite_snps5="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_hapmap_3.3.hg38.vcf.gz"
-#knownsite_snps6="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_1000G_omni2.5.hg38.vcf.gz"
-#knownsite_snps7="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_1000G_phase1.snps.high_confidence.hg38.vcf.gz"
+knownsite_snps3="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_Homo_sapiens_assembly38.dbsnp138.vcf"
+knownsite_snps4="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_Axiom_Exome_Plus.genotypes.all_populations.poly.hg38.vcf.gz"
+knownsite_snps5="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_1000G_phase1.snps.high_confidence.hg38.vcf.gz"
+
+#knownsite_snps6="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_1000G.phase3.integrated.sites_only.no_MATCHED_REV.hg38.vcf"
+#knownsite_snps7="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_hapmap_3.3.hg38.vcf.gz"
+#knownsite_snps8="../../databases/human_gencode/snps_vcf_files/broad/resources_broad_hg38_v0_1000G_omni2.5.hg38.vcf.gz"
 
 #dbSNP from NCBI
-#The site .39.vcp is problematic for GRCh38 human genome build
-#knownsite_snps1="../../databases/human_gencode/snps_vcf_files/ncbi/known_sites_GCF_000001405.39.vcf"
+#The site .39.vcf is problematic for GRCh38 human genome build
 #knownsite_snps9="../../databases/human_gencode/snps_vcf_files/ncbi/known_sites_GCF_000001405.25.vcf"
+#knownsite_snps1="../../databases/human_gencode/snps_vcf_files/ncbi/known_sites_GCF_000001405.39.vcf"
+
 
 outdir_recal_data="../../stubdata/recal_data_out/"
 recal_data_name="recal_data.table"
@@ -79,9 +81,11 @@ gatk BaseRecalibrator \
    -R $human_reference_fasta \
    --known-sites $knownsite_snps1 \
    --known-sites $knownsite_snps2 \
+   --known-sites $knownsite_snps3 \
+   --known-sites $knownsite_snps4 \
+   --known-sites $knownsite_snps5 \
    -O $outdir_recal_data$recal_data_name
 
-#   --known-sites $knownsite_snps3 \
 #   --known-sites $knownsite_snps4 \
 #   --known-sites $knownsite_snps5 \
 #   --known-sites $knownsite_snps6 \
