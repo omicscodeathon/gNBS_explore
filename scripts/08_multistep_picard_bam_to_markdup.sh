@@ -56,36 +56,10 @@ for input_sam in $input_sequence_pattern; do accession=$(echo $input_sam | sed '
       I=$outdir_markdup$accession.markdup.bam
   echo "Picardtools indexing process for marked-duplicate-sorted BAM "$accession".markdup.bam completed."; \
 
-  #samtools sort -@$cpu -O BAM -n -o $outdir_namesort$accession.namesort.bam $input_bam; \
-  #echo "samtools BAM to name-sorted BAM process completed for $input_bam!"; \
-
-  #samtools fixmate -@$cpu -O BAM -m $outdir_namesort$accession.namesort.bam $outdir_fixmate$accession.fixmate.bam; \
-  #echo "samtools added ms and MC tags for markduplicates process to use later."; \
-
-#fixmate is working!
-  #samtools sort -@$cpu -O BAM -o $outdir_positionsort$accession.positionsort.bam $outdir_fixmate$accession.fixmate.bam; \
-  #echo "samtools sorted the (fixmate) BAM $accession.fixmate.bam by position for markduplicates to use later."; \
-
-  #samtools markdup -@$cpu $outdir_positionsort$accession.positionsort.bam $outdir_markdup$accession.markdup.bam; \
-  #echo "samtools marked duplicates process for position-sorted BAM $accession.positionsort.bam completed."; \
-
-#remove duplicate has no file
-  #samtools markdup -@$cpu -r $outdir_markdup$accession.markdup.bam $outdir_remdup$accession.remdup.bam; \
-  #echo "samtools remove duplicates process for BAM file $accession.markdup.bam completed."; \
-
   echo;
   done
 
-  echo "Picardtools multistep BAM to mark and remove duplicates from BAM files successfully completed for all BAM files!"
+  echo "Picardtools multistep BAM to marked duplicates from BAM files successfully completed for all BAM files!"
 
 ## From the command line
-## for f in bam_dir/*.bam; do echo "processing: "$f; ./samtools_bam2sortedbam.sh $f; done
-#java -jar picard.jar SortSam \
-#      I=input.bam \
-#      O=sorted.bam \
-#      SORT_ORDER=coordinate
-
-#java -jar picard.jar MarkDuplicates \
-#      I=input.bam \
-#      O=marked_duplicates.bam \
-#      M=marked_dup_metrics.txt
+# ./08_08_multistep_picard_bam_to_markdup.sh
