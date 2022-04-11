@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-## This script performs the GATK BaseRecalibrator step which is necessary for variant calling
+## This script performs the GATK Variant Calling
 
 cpu=24
 echo "CPUs: $cpu"
@@ -8,7 +8,7 @@ echo "CPUs: $cpu"
 ram=32
 echo "RAM: $ram"
 echo
-echo "GATK ApplyBSQR step is ongoing ..."
+echo "GATK Variant Calling step is ongoing ..."
 echo
 
 #Broad Institute Fasta:
