@@ -19,8 +19,9 @@ echo "Output Directory: $outdir"
 
 trimmed_reports_dir="../../stubdata/fastqc_trimmed_report"
 echo "Trimmed Reports Directory: "$trimmed_reports_dir
-
-
+echo
+echo "Trimgalore adapter trimming is ongoing now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
+echo
 count_acc=0
 for input_file in $input_forward_pattern; do f=$(basename $input_file); accession=$(echo $f | sed 's/_1.fastq//');
   ((count_acc++))
@@ -36,4 +37,4 @@ mv -fv $trimmed_reads_outdir/*.{txt,html,zip} $trimmed_reports_dir
 
 echo "Post-trimming Fastqc Reports have been moved to this location: "$trimmed_reports_dir
 echo
-echo "Trimming for all Fastq files completed successfully!"
+echo "Trimming for all Fastq files completed successfully now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"

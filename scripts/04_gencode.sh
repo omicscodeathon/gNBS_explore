@@ -9,7 +9,15 @@ echo "PREFIX URL: $prefix_url"
 download_filename=$1
 echo "INPUT FILENAME: $download_filename"
 
+echo
+echo "WGET file download is ongoing now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
+echo
+
+## I need to re-write this script and include the input file in the script
+
 wget ${prefix_url}/${download_filename}
 echo "WGET successfully processed $download_filename"
+echo
+echo "WGET successfully download all files now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 
 # for u in $(cat ../data/human_gencode/assembly_files.txt); do ./04_gencode.sh $u; done

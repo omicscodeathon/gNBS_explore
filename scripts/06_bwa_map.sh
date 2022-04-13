@@ -18,7 +18,9 @@ echo "Log File Output Directory: "$outdir_logs
 mkdir -pv $outdir_sams
 mkdir -pv $outdir_logs
 
-
+echo
+echo "BWA mem is mapping the reads to the reference genome now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
+echo
 #ref_genome="../../databases/human_gencode/GCA_000001405.29_GRCh38.p14_genomic.fna.gz"
 #echo "REFERENCE GENOME: $ref_genome="
 
@@ -34,6 +36,6 @@ for file in $(ls $forward_seq_pattern); do filename=$(basename $file); a=$(echo 
 done
 
 echo 
-echo "Mapping process completed for all Fastq files!"
+echo "Mapping process completed for all Fastq files now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 # Mapping command that we ran
 # ./06_bwa_map.sh

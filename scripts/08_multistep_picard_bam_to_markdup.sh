@@ -18,19 +18,13 @@ echo "Input sequence pattern: "$input_sequence_pattern
 
 echo
 echo "Output directory for Coordinate sorting: "$outdir_coordsort
-#echo "Output directory for Name sorting: "$outdir_namesort
-#echo "Output directory for fixmate BAMs: "$outdir_fixmate
-#echo "Output directory Position sorting: "$outdir_positionsort
 echo "Output directory for Marked Duplicates: "$outdir_markdup
-#echo "Output directory for Removed Duplicates: "$outdir_remdup
 echo
 
+echo "Picard tools SAM to sorted / marked duplicates BAM file generation is ongoing now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
+echo
 mkdir -pv $outdir_coordsort
-#mkdir -pv $outdir_namesort
-#mkdir -pv $outdir_fixmate
-#mkdir -pv $outdir_positionsort
 mkdir -pv $outdir_markdup
-#mkdir -pv $outdir_remdup
 echo
 
 count_acc=0
@@ -39,7 +33,6 @@ for input_sam in $input_sequence_pattern; do accession=$(echo $input_sam | sed '
   echo "processing accession Id $count_acc: " $accession; \
   echo "Output sorted BAM file will be: "$accession".coordsort.bam"; \
 
-  #samtools sort -@$cpu -O BAM -o $outdir_coordsort$accession.coordsort.bam $input_bam; \
   PicardCommandLine SortSam \
       I=$input_sam \
       O=$outdir_coordsort$accession.coordsort.bam \
@@ -59,7 +52,7 @@ for input_sam in $input_sequence_pattern; do accession=$(echo $input_sam | sed '
   echo;
   done
 
-  echo "Picardtools multistep BAM to marked duplicates from BAM files successfully completed for all BAM files!"
+  echo "Picardtools multistep BAM to mark and remove duplicates from BAM files successfully completed for all BAM files now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 
 ## From the command line
-# ./08_08_multistep_picard_bam_to_markdup.sh
+## ./08_multistep_picard_bam_to_markdup.sh

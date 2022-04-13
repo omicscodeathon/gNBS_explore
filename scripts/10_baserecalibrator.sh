@@ -58,7 +58,7 @@ echo "Input sequence pattern: "$input_sequence_pattern
 
 echo
 
-echo "Starting GATK Base Quality Score Recalibrator step ..."
+echo "Starting GATK Base Quality Score Recalibrator step now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S') ..."
 
 count_acc=0
 for input_bam in $input_sequence_pattern; do f=$(basename $input_bam); accession=$(echo $f | sed 's/.markdup.bam//');
@@ -86,8 +86,6 @@ gatk BaseRecalibrator \
    --known-sites $knownsite_snps5 \
    -O $outdir_recal_data$recal_data_name
 
-#   --known-sites $knownsite_snps4 \
-#   --known-sites $knownsite_snps5 \
 #   --known-sites $knownsite_snps6 \
 #   --known-sites $knownsite_snps7 \
 #   --known-sites $knownsite_snps8 \
@@ -96,7 +94,7 @@ gatk BaseRecalibrator \
   done
 
   echo
-  echo "GATK BaseRecalibrator step successfully completed for all BAM files!"
+  echo "GATK BaseRecalibrator step successfully completed for all BAM files now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 
 ## From the command line
 ## ./13_baserecalibrator.sh

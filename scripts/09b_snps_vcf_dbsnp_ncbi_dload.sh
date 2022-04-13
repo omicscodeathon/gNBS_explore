@@ -16,13 +16,15 @@ echo "Checking to make sure that the output directory already exists ..."
 
 mkdir -pv $outdir
 
+echo "WGET file download is ongoing now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
+
 echo
 for u in $(cat $download_filename); do wget -O $outdir$u $base_url$u; 
 echo "WGET successfully processed: "$u; \
 done
 
 echo
-echo "WGET successfully downloaded all files!"
+echo "WGET successfully downloaded all files now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 
 echo
 #fastq -> fasta conversion

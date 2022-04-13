@@ -13,7 +13,8 @@ echo "Output Directory: $out_dir"
 
 matrix_out="$matrix_out"
 echo "Alignment Matrix Output Dir from MultiQC: $out_dir"
-
+echo
+echo "Alignment Matrix is being generated now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 echo
 for f in $pattern; do echo $f; \
 sample=$(echo $f | sed 's/[^SRR]*//' | sed 's/.sam//' );
@@ -28,4 +29,4 @@ cd $matrix_out
 multiqc ../$out_dir/
 
 echo
-echo "MultiQC completely generated stats successfully!"
+echo "MultiQC completely generated stats successfully now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"

@@ -8,7 +8,7 @@ echo "CPUs: $cpu"
 ram=32
 echo "RAM: $ram"
 echo
-echo "GATK ApplyBSQR step is ongoing ..."
+echo "GATK ApplyBSQR step is ongoing now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S') ..."
 echo
 
 #Broad Institute Fasta:
@@ -44,7 +44,7 @@ gatk ApplyBQSR \
   done
 
   echo
-  echo "GATK Apply BaseQualityScoreRecalibrator step successfully completed for all BAM files!"
+  echo "GATK Apply BaseQualityScoreRecalibrator step successfully completed for all BAM files now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 
 ## From the command line
 ## ./11_applybsqr.sh

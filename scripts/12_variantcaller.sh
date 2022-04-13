@@ -2,13 +2,13 @@
 
 ## This script performs the GATK Variant Calling
 
-cpu=24
+cpu=32
 echo "CPUs: $cpu"
 
 ram=32
 echo "RAM: $ram"
 echo
-echo "GATK Variant Calling step is ongoing ..."
+echo "GATK Variant Calling step is ongoing now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S') ..."
 echo
 
 #Broad Institute Fasta:
@@ -37,17 +37,26 @@ for input_bam in $input_sequence_pattern; do f=$(basename $input_bam); accession
   echo; \
   echo "Doing Variant Calling on accession Id "$count_acc": " $accession \
 
-##HaplotypeCaller ApplyRecalibrator Step:
+##HaplotypeCaller Step:
 gatk --java-options "-Xmx4g" HaplotypeCaller \
    -R $human_reference_fasta \
    -I $outdir_applybsqr$accession.applybsqr.bam \
    -O $outdir_variants$outfile_variants.vcf.gz \
    -bamout $outdir_variantcaller$accession.variantcall.bam
+   --native-pair-hmm-threads $cpu
 
   done
 
+echo
+echo "GATK is now unzipping the called variants ..."
+cd $outdir_variants
+gunzip $outfile_variants.vcf.gz
+
   echo
-  echo "GATK Haplotype Caller successfully run on all sorted BAM files!"
+  echo "GATK Haplotype Caller successfully run on all sorted BAM files now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 
 ## From the command line
 ## ./12_variantcaller.sh
+## GATK HaplotypeCaller can multithread using the following argument, default integer value is 4. Specify 32 for 32 cores:
+## --native-pair-hmm-threads 32
+##
