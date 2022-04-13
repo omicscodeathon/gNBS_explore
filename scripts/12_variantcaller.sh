@@ -42,7 +42,7 @@ gatk --java-options "-Xmx4g" HaplotypeCaller \
    -R $human_reference_fasta \
    -I $outdir_applybsqr$accession.applybsqr.bam \
    -O $outdir_variants$outfile_variants.vcf.gz \
-   -bamout $outdir_variantcaller$accession.variantcall.bam
+   -bamout $outdir_variantcaller$accession.variantcall.bam \
    --native-pair-hmm-threads $cpu
 
   done
