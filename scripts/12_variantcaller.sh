@@ -21,7 +21,10 @@ outdir_variantcaller="../../stubdata/variantcaller_sortedbams_bwa/"
 outdir_applybsqr="../../stubdata/applybsqr_markdup/"
 input_sequence_pattern=$outdir_applybsqr"*.applybsqr.bam"
 outdir_variants="../../stubdata/variants/"
-outfile_variants="output"
+vcfdir="vcfs"
+outdir_vcf=$outdir_variants$vcfdir
+
+#outfile_variants="output"
 
 echo "Input sequence pattern: "$input_sequence_pattern
 mkdir -pv $outdir_variantcaller
@@ -41,19 +44,23 @@ for input_bam in $input_sequence_pattern; do f=$(basename $input_bam); accession
 gatk --java-options "-Xmx4g" HaplotypeCaller \
    -R $human_reference_fasta \
    -I $outdir_applybsqr$accession.applybsqr.bam \
-   -O $outdir_variants$outfile_variants.vcf.gz \
+   -O $outdir_variants$accession.vcf.gz \
    -bamout $outdir_variantcaller$accession.variantcall.bam \
    --native-pair-hmm-threads $cpu
 
   done
+cd $outdir_variants
+mkdir -pv $vcfdir
+cp -v *.vcf.gz $vcfdir
+cd $vcfdir
 
 echo
 echo "GATK is now unzipping the called variants ..."
-cd $outdir_variants
-gunzip $outfile_variants.vcf.gz
+gunzip *.gz
 
-  echo
-  echo "GATK Haplotype Caller successfully run on all sorted BAM files now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
+echo "All variant calling files have now been unzipped into "$outdir_variants$vcfdir
+echo
+echo "GATK Haplotype Caller successfully run on all sorted BAM files now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 
 ## From the command line
 ## ./12_variantcaller.sh
