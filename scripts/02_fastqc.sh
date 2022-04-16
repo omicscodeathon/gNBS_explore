@@ -1,5 +1,8 @@
 #/usr/bin/env bash
 
+##This script expects a Fastq file (supplied from the command line) and performs quality control on it.
+## Dependencies: Fastqc
+
 cpus=24
 echo "CPUS: $cpus"
 
