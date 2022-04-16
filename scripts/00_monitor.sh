@@ -1,11 +1,15 @@
 #/usr/bin/env bash
 
+# This script monitors a process in a linux environment
+
 cpus=24
 #echo "CPUS: $cpus"
 
 #path_to_command=$1
 command="ls -lAhtr ../../databases/human_gencode/snps_vcf_files/broads/"
 
-while [ 0 ]; do echo "processing the command: "; $command; sleep 10; done
+sleeptime=10
 
-# bwa index -p human_index_gencode/human_index human_gencode/GCA_000001405.29_GRCh38.p14_genomic.fna.gz
+while [ 0 ]; do echo "processing the command: "; $command; sleep $sleeptime; done
+
+# ./00_monitor.sh
