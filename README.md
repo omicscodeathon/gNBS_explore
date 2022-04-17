@@ -56,7 +56,7 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
  i.e. Using Bioinformatics frameworks such as Nextflow and Snakemake
 2. Develop a functional African-specific gNBS analysis pipeline for use in routine Clinical Practice
 
-Original GitHub readme was done by [Pauline King’ori](https://twitter.com/paulah_kings)
+
 
 
 ## **Team Members**
@@ -65,7 +65,7 @@ Original GitHub readme was done by [Pauline King’ori](https://twitter.com/paul
 2.	[Olaitan I. Awe](https://github.com/laitanawe) – Project co-lead
 3.	[Annassiri Fatima Zahara](https://github.com/f-annassiri) - Technical team lead
 
-
+Original GitHub readme was done by [Pauline King’ori](https://twitter.com/paulah_kings)
 
 
 
