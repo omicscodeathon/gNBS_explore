@@ -40,7 +40,13 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 ###### Software Installation:
  ```bash
 #Fastqc v0.11.9
+apt-get install -y default-jre=2:1.11-68ubuntu1~18.04.1
+cd /opt/
 wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip
+wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip
+unzip fastqc_v0.11.9.zip
+rm -v /opt/fastqc_v0.11.9.zip
+mv -fv /opt/FastQC /opt/fastqc
 ```
 
 ``` bash
