@@ -34,7 +34,7 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 6.Burrows-Wheeler Aligner
 
 
-###### Software Installation.
+###### Software Installation:
  ```bash
 #Fastqc v0.11.9
 wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip
@@ -88,20 +88,13 @@ snpeff -version
  i.e. Using Bioinformatics frameworks such as Nextflow and Snakemake
 2. Develop a functional African-specific gNBS analysis pipeline for use in routine Clinical Practice
 
-
-
-
 ## **Team Members**
 
 1.	[Rissy Wesonga](https://github.com/Rissy2021) – Project team lead
 2.	[Olaitan I. Awe](https://github.com/laitanawe) – Project co-lead
 3.	[Annassiri Fatima Zahara](https://github.com/f-annassiri) - Technical team lead
 
-Original GitHub readme was done by [Pauline King’ori](https://twitter.com/paulah_kings)
-
-
-
-
+The first version of the README was drafted by [Pauline King’ori](https://twitter.com/paulah_kings)
 
 ## **References**
 
