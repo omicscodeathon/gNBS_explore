@@ -26,15 +26,15 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 ![Workflow](figures/workflow.png)
 
 ## **Tools used in the Analysis**
-1.) Fasterq-dump,
-2.) FastQC,
-3.) Trim Galore,
-4.) MultiQC,
-5.) wget,
-6.) Burrows-Wheeler Aligner,
-7.) Picard-tools,
-8.) GATK,
-9.) bcftools,
+1.) Fasterq-dump
+2.) FastQC
+3.) Trim Galore
+4.) MultiQC
+5.) wget
+6.) Burrows-Wheeler Aligner
+7.) Picard-tools
+8.) GATK
+9.) bcftools
 10.) snpEff
 
 ###### Software Installation:
@@ -80,14 +80,6 @@ snpeff -version
 ##BCF Tools
 apt-get install -y bcftools=1.7-2
 ```
-
-#``` bash
-###BCF Tools
-#apt-get install -y bcftools=1.7-2
-#```
-
-
-
 
 
 ## **Input and Output Flow of the steps**
