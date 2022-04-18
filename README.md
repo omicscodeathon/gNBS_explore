@@ -20,18 +20,10 @@ The current NBS programs in Africa are predominantly along the coast and organiz
 
 Blood sample dependent NBS programs are dependent on technologies such as mass spectrometry and genetic sequencing. The routine application of next-generation sequencing (NGS) in clinical laboratories has given rise to significant opportunities for NBS, thereby improving health among infants and children. It is noteworthy that NBS is an effective strategy in the prevention of inborn errors of metabolism (IEM) with emphasis on timely detection of deteriorating health outcomes and early treatment. While critical to improving survival and associated cost effectiveness, the implementation of NBS is particularly challenging in low-income, high-burden settings such as those in much of Africa (Kato et al., 2018).
 
-## **Materials and methods**
-
-<!--
-![Presentation1](https://user-images.githubusercontent.com/61578503/159446323-eff1bed7-a786-4935-8365-afdfe72bf17f.png)
--->
+## **Methods**
 
 ## **Workflow**
-
-
 ![Workflow](figures/workflow.png)
-
-
 
 ## **Tools used in the Analysis**
 1.Fasterq-dump,
@@ -40,6 +32,46 @@ Blood sample dependent NBS programs are dependent on technologies such as mass s
 4.MultiQC,
 5.wget,
 6.Burrows-Wheeler Aligner
+
+
+###### Software Installation.
+ ```bash
+#Fastqc v0.11.9
+wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.9.zip
+```
+
+``` bash
+##BWA:
+apt-get -y install bwa=0.7.17-1
+```
+
+```bash
+#GATK
+cd /opt/
+export GATK_PACKAGE="gatk.zip"
+wget -O $GATK_PACKAGE https://github.com/broadinstitute/gatk/releases/download/4.2.2.0/gatk-4.2.2.0.zip
+unzip ${GATK_PACKAGE}
+rm -v ${GATK_PACKAGE}
+ln -svf /opt/gatk-4.2.2.0/gatk /usr/local/bin/
+gatk --version 2>&1 | tail -3
+```
+
+```bash
+#Picard
+apt-get install -y picard-tools=2.8.1+dfsg-3
+```
+
+```bash
+#snpEff
+cd /opt
+# Download latest version
+wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
+# Unzip file
+unzip snpEff_latest_core.zip
+rm -v snpEff_latest_core.zip
+alias snpeff="java -jar /opt/snpEff/snpEff.jar"
+snpeff -version
+```
 
 ## **Input and Output Flow of the steps**
 1. Fasterq-dump (input is list of accessions, output is paired-end .fq files)
