@@ -66,15 +66,6 @@ for input_bam in $input_sequence_pattern; do f=$(basename $input_bam); accession
   echo; \
   echo "processing accession Id "$count_acc": " $accession \
 
-#PicardCommandLine AddOrReplaceReadGroups \
-   I=$outdir_markdup$accession.markdup.bam \
-   O=$outdir_markdup$accession.rg.markdup.bam \
-   RGID=$accession \
-   RGLB=lib1 \
-   RGPL=ILLUMINA \
-   RGPU=unit1 \
-   RGSM=$accession
-
 ##BaseRecalibrator Step:
 gatk BaseRecalibrator \
    -I $outdir_markdup$accession.markdup.bam \
@@ -98,3 +89,13 @@ gatk BaseRecalibrator \
 
 ## From the command line
 ## ./13_baserecalibrator.sh
+# These flags will not need to be added in this step as long as they were already added during the BWA mapping step!
+##PicardCommandLine AddOrReplaceReadGroups \
+#   I=$outdir_markdup$accession.markdup.bam \
+#   O=$outdir_markdup$accession.rg.markdup.bam \
+#   RGID=$accession \
+#   RGLB=lib1 \
+#   RGPL=ILLUMINA \
+#   RGPU=unit1 \
+#   RGSM=$accession
+

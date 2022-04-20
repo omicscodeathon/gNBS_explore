@@ -24,6 +24,7 @@ echo
 #ref_genome="../../databases/human_gencode/GCA_000001405.29_GRCh38.p14_genomic.fna.gz"
 #echo "REFERENCE GENOME: $ref_genome="
 
+# The flags in -R "@RG\tID:$a\tLB:lib1\tPL:ILLUMINA\tPU:unit1\tSM:$a" are required for BaseQualityScore Recalibration to be successful!
 count_acc=0
 for file in $(ls $forward_seq_pattern); do filename=$(basename $file); a=$(echo $filename | sed 's/_1_val_1.fq//'); 
    ((++count_acc))
