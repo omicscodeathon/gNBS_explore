@@ -11,11 +11,11 @@ echo
 echo "BCFTools FilterVariants step is ongoing now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S') ..."
 echo
 
-outdir_variants_snps="../../stubdata/variants/snps2/"
-outdir_variants_indels="../../stubdata/variants/indels2/"
-outdir_filtered_snps="../../stubdata/filteredvariants2b/snps/"
-outdir_filtered_indels="../../stubdata/filteredvariants2b/indels/"
-outdir_combinedvariants="../../stubdata/combinedvariants2b/"
+outdir_variants_snps="../../stubdata/variants/snps/"
+outdir_variants_indels="../../stubdata/variants/indels/"
+outdir_filtered_snps="../../stubdata/filteredvariants/snps/"
+outdir_filtered_indels="../../stubdata/filteredvariants/indels/"
+outdir_combinedvariants="../../stubdata/combinedvariants/"
 
 input_sequence_pattern_snps=$outdir_variants_snps"*.snp.vcf"
 input_sequence_pattern_indels=$outdir_variants_indels"*.indel.vcf"
