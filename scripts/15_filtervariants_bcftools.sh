@@ -110,4 +110,4 @@ echo
 echo "BCFTools Variants Filtering and SNPs and Indels combination per sample successfully completed now, $(date +%a) $(date +'%Y-%m-%d %H:%M:%S')"
 
 ## From the command line
-## ./12_variantcaller.sh
+## ./15_filtervariants_bcftools.sh
